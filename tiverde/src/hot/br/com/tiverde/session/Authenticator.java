@@ -1,11 +1,5 @@
 package br.com.tiverde.session;
 
-import org.jboss.seam.annotations.In;
-import org.jboss.seam.annotations.Logger;
-import org.jboss.seam.annotations.Name;
-import org.jboss.seam.log.Log;
-import org.jboss.seam.security.Credentials;
-import org.jboss.seam.security.Identity;
 
 @Name("authenticator")
 public class Authenticator
@@ -14,6 +8,7 @@ public class Authenticator
 
     @In Identity identity;
     @In Credentials credentials;
+    String user;
 
     public boolean authenticate()
     {
