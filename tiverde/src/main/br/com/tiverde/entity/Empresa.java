@@ -1,10 +1,12 @@
 package br.com.tiverde.entity;
 
 import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Version;
+
 import org.hibernate.validator.Length;
 
 @Entity
@@ -14,12 +16,23 @@ public class Empresa implements Serializable
     private Long id;
     private Integer version;
     private String name;
+    private Integer ano;
+
+
 
     // add additional entity attributes
 
     // seam-gen attribute getters/setters with annotations (you probably should edit)
 
-    @Id @GeneratedValue
+    public Integer getAno() {
+		return ano;
+	}
+
+	public void setAno(Integer ano) {
+		this.ano = ano;
+	}
+
+	@Id @GeneratedValue
     public Long getId() {
         return id;
     }
